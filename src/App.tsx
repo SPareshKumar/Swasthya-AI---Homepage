@@ -3,6 +3,9 @@ import { Menu, X, Heart, Activity, Calculator, MessageSquare, ShoppingCart, Musi
 import healthLogo from './health3.svg';
 // Import the WebGL MetallicPaint component
 import MetallicPaint, { parseLogoImage } from './MetallicPaint/MetallicPaint';
+// Import new components
+import FeaturesSection from './components/FeaturesSection';
+import ScrollTransition from './components/ScrollTransition';
 
 // Custom hook for sidebar state
 const useSidebar = () => {
@@ -320,6 +323,8 @@ const App: React.FC = () => {
       <Sidebar isOpen={isOpen} onClose={closeSidebar} />
       <main className="relative">
         <Hero />
+        <ScrollTransition />
+        <FeaturesSection />
       </main>
     </div>
   );
