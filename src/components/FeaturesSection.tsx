@@ -59,7 +59,7 @@ const FeaturesSection: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-black py-20 px-4 overflow-hidden">
+    <section className="relative bg-black py-6 px-4 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
       
@@ -74,7 +74,7 @@ const FeaturesSection: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8"
         >
           <motion.div
             variants={titleVariants}
@@ -122,23 +122,6 @@ const FeaturesSection: React.FC = () => {
               delay={index * 0.1}
             />
           ))}
-        </motion.div>
-
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-teal-400/20 hover:border-teal-400/40"
-          >
-            Explore All Features
-          </motion.button>
         </motion.div>
       </div>
     </section>
